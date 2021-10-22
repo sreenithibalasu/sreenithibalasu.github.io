@@ -32,6 +32,7 @@
 			"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 			"data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
 			"mark": "bar",
+			"autosize": "fit",
 			"transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
 			"encoding": {
 				"x": {"field": "Congress Dist", "type": "quantitative", "axis": {
