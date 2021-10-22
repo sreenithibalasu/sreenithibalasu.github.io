@@ -13,22 +13,19 @@
 	</body>
 	<script>
 		const mySpec = {
-				  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-				  "data": {
-				    "values": [
-				      {"A": 10, "B": 21, "C": 2},
-				      {"A": 30, "B": 20, "C": 4},
-				      {"A": 25, "B": 15, "C": 6},
-				      {"A": 5, "B": 30, "C": 8}
-				    ]
-				  },
-				  "mark": "circle",
-				  "encoding": {
-				    "x": {"field": "A", "type": "quantitative"},
-				    "y": {"field": "B", "type": "quantitative"},
-				    "size": {"field": "C", "type": "quantitative"}
-				  }
-				}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
+  "mark": "bar",
+  "transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
+  "encoding": {
+    "x": {"field": "Congress Dist", "type": "quantitative", "axis": {
+      "title": "Congressional District Number"  
+    }},
+    "y": {"field": "Square Footage", "type": "quantitative", "aggregate": "sum", "axis": {
+      "title": "Total Square Footage"
+    }}
+  }
+}
 		vegaEmbed('#viz', mySpec);
 	</script>
 </html>
