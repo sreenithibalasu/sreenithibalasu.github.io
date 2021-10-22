@@ -30,19 +30,29 @@
 	</body>
 	<script>
 		const mySpec = {
-			"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-			"data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
-			"mark": "bar",
-			"transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
-			"encoding": {
-				"x": {"field": "Congress Dist", "type": "quantitative", "axis": {
-					"title": "Congressional District Number"  
-				}},
-				"y": {"field": "Square Footage", "type": "quantitative", "aggregate": "sum", "axis": {
-					"title": "Total Square Footage"
-				}}
-			}
-		}
+				  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+				  "data": {
+				    "url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"
+				  },
+				  "mark": "bar",
+				  "transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
+				  "encoding": {
+				    "x": {
+				      "field": "Congressional Full Name",
+				      "type": "ordinal",
+				      "axis": {"title": "Congressional District Name"}
+				    },
+				    "y": {
+				      "field": "Square Footage",
+				      "type": "quantitative",
+				      "aggregate": "sum",
+				      "axis": {"title": "Total Square Footage"}
+				    }
+				  }
+				}
 		vegaEmbed('#viz', mySpec);
 	</script>
+	<p> This bar plot represents the total square footage per congressional district. The x-axis represents the Congressional district
+	by name and the y-axis represents the total square footage.</p>
+	<p> From the plot, we see that congressional district with the name Rodney L. Davis has the most total square footage. </p>
 </html>
