@@ -6,37 +6,41 @@
 		<title> Sreenithi Balasubramanian </title>
 	</head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
- 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 	<style>
-	    h1 {
-	      position: relative;
-	      font-family: 'Raleway', sans-serif;
-	  }
+		h1 {
+		position: relative;
+		font-family: 'Raleway', sans-serif;
+		}
+
+		p {
+		position: relative;
+		font-family: 'Raleway', sans-serif;
+		}
 	</style>
 	<body>
 		<h1 style="text-align:center;"> SREENITHI BALASUBRAMANIAN </h1>
-		<p> TEST </p>
+		<p style="text-align:center;"> This visualization is part of Assignement 3 for IS445 Data Visualization </p>
 
 		<div id="viz">
 		</div>
 	</body>
-	<div align="center">
 	<script>
 		const mySpec = {
-			  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-			  "data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
-			  "mark": "bar",
-			  "transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
-			  "encoding": {
-			    "x": {"field": "Congress Dist", "type": "quantitative", "axis": {
-			      "title": "Congressional District Number"  
-			    }},
-			    "y": {"field": "Square Footage", "type": "quantitative", "aggregate": "sum", "axis": {
-			      "title": "Total Square Footage"
-			    }}
-			  }
+			"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+			"data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
+			"mark": "bar",
+			"transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
+			"encoding": {
+				"x": {"field": "Congress Dist", "type": "quantitative", "axis": {
+					"title": "Congressional District Number"  
+				}},
+				"y": {"field": "Square Footage", "type": "quantitative", "aggregate": "sum", "axis": {
+					"title": "Total Square Footage"
+				}}
 			}
+		}
 		vegaEmbed('#viz', mySpec);
-		</script> </div>
+	</script>
 </html>
