@@ -3,29 +3,30 @@
 		<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-		<title> THIS IS MY HOMEPAGE </title
+		<title> Sreenithi Balasubramanian </title
 	</head>
 	<body>
-		<p> blah blah blah </p>
+		<h1> SREENITHI BALASUBRAMANIAN </h1>
+		<p> TEST </p>
 
 		<div id="viz">
 		</div>
 	</body>
 	<script>
 		const mySpec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
-  "mark": "bar",
-  "transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
-  "encoding": {
-    "x": {"field": "Congress Dist", "type": "quantitative", "axis": {
-      "title": "Congressional District Number"  
-    }},
-    "y": {"field": "Square Footage", "type": "quantitative", "aggregate": "sum", "axis": {
-      "title": "Total Square Footage"
-    }}
-  }
-}
+			  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+			  "data": {"url": "https://raw.githubusercontent.com/sreenithibalasu/sreenithibalasu.github.io/main/building_inventory.csv"},
+			  "mark": "bar",
+			  "transform": [{"filter": {"field": "Congress Dist", "gt": 0}}],
+			  "encoding": {
+			    "x": {"field": "Congress Dist", "type": "quantitative", "axis": {
+			      "title": "Congressional District Number"  
+			    }},
+			    "y": {"field": "Square Footage", "type": "quantitative", "aggregate": "sum", "axis": {
+			      "title": "Total Square Footage"
+			    }}
+			  }
+			}
 		vegaEmbed('#viz', mySpec);
 	</script>
 </html>
