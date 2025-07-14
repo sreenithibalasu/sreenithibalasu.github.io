@@ -4,7 +4,6 @@ import type React from "react"
 import type { CSSProperties } from "react"
 
 import Link from "next/link"
-import Image from "next/image"
 
 const styles: { [key: string]: CSSProperties } = {
   container: {
@@ -375,9 +374,10 @@ export default function Portfolio() {
       {/* About Me Section */}
       <section id="about" style={{ ...styles.section, ...styles.hero }}>
         <div style={styles.sectionContainer}>
-          <div style={{ ...styles.heroGrid, gridTemplateColumns: window.innerWidth > 1024 ? "1fr 1fr" : "1fr" }}>
+          <div style={{ ...styles.heroGrid, gridTemplateColumns: "1fr 1fr" }}>
             <div>
-              <h2 style={styles.heroTitle}>👋🏼 Hi, I&apos;m <span style={styles.heroGradient}>Sree</span>
+              <h2 style={styles.heroTitle}>
+          👋🏼 Hi, I'm <span style={styles.heroGradient}>Sree</span>
               </h2>
               <p style={styles.heroSubtitle}>
                 A Product Data Analyst at Genentech in South San Francisco, CA. I build practical AI tools in my spare time to automate the boring stuff.
@@ -400,7 +400,7 @@ export default function Portfolio() {
 
               <div style={{ marginTop: "1rem" }}>
                 
-                <Button variant="outline">
+                <Button variant="outline" asChild>
                 <Link href="https://github.com/sreenithibalasu" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >
                   <span>🔗</span> GitHub
                 </Link>
@@ -416,7 +416,7 @@ export default function Portfolio() {
 
             <div style={styles.profileContainer}>
               <div style={styles.profileWrapper}>
-                <div style={styles.profileImage}><Image src="/profile.jpg" alt="Profile" style={styles.profileImage} /></div>
+                <div style={styles.profileImage}><img src="/profile.jpg" alt="Profile" style={styles.profileImage} /></div>
 
               </div>
             </div>
@@ -430,7 +430,7 @@ export default function Portfolio() {
           <div style={styles.sectionHeader}>
             <h2 style={styles.sectionTitle}>Professional Experience</h2>
             <p style={styles.sectionSubtitle}>
-              I&apos;ve had the privilege of working with amazing teams and supporting strategies that impact thousands of patients.
+              I've had the privilege of working with amazing teams and supporting strategies that impact thousands of patients.
             </p>
           </div>
 
@@ -450,7 +450,7 @@ export default function Portfolio() {
                   <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>📅 Jan 2023 - Present | South San Francisco, CA</p>
                 </div>
                 <div style={styles.companyLogo}>
-          <Image
+          <img
           src="/gne_logo.png"  // put your logo image path here (public folder or URL)
           alt="Company Logo"
           style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -494,7 +494,7 @@ export default function Portfolio() {
                       fontSize: "2rem",
                     }}
                   >
-                      <Image
+                      <img
                       src="/actemra_logo.png"  // put your logo image path here (public folder or URL)
                       alt="Actemra Logo"
                       style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -514,7 +514,7 @@ export default function Portfolio() {
               fontSize: "2rem",
             }}
           >
-              <Image
+              <img
               src="/hemibra_logo.jpg"  // put your logo image path here (public folder or URL)
               alt="Hemlibra Logo"
               style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -532,7 +532,7 @@ export default function Portfolio() {
                       fontSize: "2rem",
                     }}
                   >
-                      <Image
+                      <img
                       src="/itovebi_logo.png"  // put your logo image path here (public folder or URL)
                       alt="Itovebi Logo"
                       style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -559,7 +559,7 @@ export default function Portfolio() {
                   <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>📅 May 2022 - Aug 2022</p>
                 </div>
                 <div style={styles.companyLogo}>
-          <Image
+          <img
           src="/gne_logo.png"  // put your logo image path here (public folder or URL)
           alt="Company Logo"
           style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -590,7 +590,7 @@ export default function Portfolio() {
           <div style={styles.sectionHeader}>
             <h2 style={styles.sectionTitle}>Personal Projects</h2>
             <p style={styles.sectionSubtitle}>
-              Here are some AI projects I&apos;ve done in the past and am currently working on.
+              Here are some AI projects I've done in the past and am currently working on.
             </p>
           </div>
 
@@ -607,7 +607,7 @@ export default function Portfolio() {
               <div style={styles.cardHeader}>
                 <h3 style={styles.cardTitle}>Daily Commute Briefing</h3>
                 <p style={styles.cardDescription}>
-                AI powered notification that details your upcoming commute based on your Tesla&apos;s current state, weather and traffic data.
+                AI powered notification that details your upcoming commute based on your Tesla's current state, weather and traffic data.
                 </p>
               </div>
               <div style={styles.cardContent}>
@@ -691,7 +691,7 @@ export default function Portfolio() {
             <div style={styles.cardContent}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}>
                 <div style={styles.universityLogo}>
-          <Image
+          <img
           src="/uiuc_logo.png"  // put your logo image path here (public folder or URL)
           alt="uiuc Logo"
           style={{ width: 40, height: 40, objectFit: 'contain' }}
@@ -730,7 +730,7 @@ export default function Portfolio() {
           <p style={{ color: "#9333ea", fontWeight: 500, marginBottom: "0.5rem" }}>Research at Human + ML Lab</p>
           <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>Advisor: Dr. Nigel Bosch </p>
           <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>
-          Worked on analyzing large scale survey response data on students&apos; perspectives on online learning platforms in educational and non-educational environments. Performed thematic analysis using R and generating linear mixed models to identify significant themes and the impact on views about data collection.
+          Worked on analyzing large scale survey response data on students' perspectives on online learning platforms in educational and non-educational environments. Performed thematic analysis using R and generating linear mixed models to identify significant themes and the impact on views about data collection.
           </p>
 
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -748,7 +748,7 @@ export default function Portfolio() {
             <div style={styles.cardContent}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}>
                 <div style={styles.universityLogo}>
-          <Image
+          <img
           src="/sastra_logo.png"  // put your logo image path here (public folder or URL)
           alt="sastra Logo"
           style={{ width: 40, height: 40, objectFit: 'contain' }}
@@ -795,7 +795,7 @@ export default function Portfolio() {
         <div style={styles.sectionContainer}>
           <div style={styles.sectionHeader}>
             <h2 style={styles.sectionTitle}>Fun Stuff</h2>
-            <p style={styles.sectionSubtitle}>When I&apos;m not coding, here&apos;s what keeps me busy and inspired!</p>
+            <p style={styles.sectionSubtitle}>When I'm not coding, here's what keeps me busy and inspired!</p>
           </div>
 
           <div style={{ ...styles.grid, ...styles.grid4 }}>
@@ -831,7 +831,7 @@ export default function Portfolio() {
                   </div>
                   <h3 style={styles.cardTitle}>Running + Lifting</h3>
                   <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>
-                    I try to run long distances - most I&apos;ve covered is a 10K. I&apos;m also training hard to lift heavy Trader Joe&apos;s grocery hauls.
+                    I try to run long distances - most I've covered is a 10K. I'm also training hard to lift heavy Trader Joe's grocery hauls.
                   </p>
                 </div>
               </div>
@@ -885,9 +885,9 @@ export default function Portfolio() {
       <footer style={{ ...styles.section, ...styles.sectionAlt }}>
         <div style={styles.sectionContainer}>
           <div style={{ textAlign: "center" }}>
-            <h3 style={{ ...styles.sectionTitle, fontSize: "2rem" }}>Let&apos;s Connect!</h3>
+            <h3 style={{ ...styles.sectionTitle, fontSize: "2rem" }}>Let's Connect!</h3>
             <p style={{ ...styles.sectionSubtitle, marginBottom: "2rem" }}>
-              I&apos;m always open to discussing new opportunities and interesting projects.
+              I'm always open to discussing new opportunities and interesting projects.
             </p>
             <div style={{ marginBottom: "2rem" }}>
               <Button variant="outline">📄 Download Resume</Button>
