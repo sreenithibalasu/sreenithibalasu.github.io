@@ -400,7 +400,7 @@ export default function Portfolio() {
 
               <div style={{ marginTop: "1rem" }}>
                 
-                <Button variant="outline" asChild>
+                <Button variant="outline">
                 <Link href="https://github.com/sreenithibalasu" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >
                   <span>🔗</span> GitHub
                 </Link>
@@ -416,7 +416,7 @@ export default function Portfolio() {
 
             <div style={styles.profileContainer}>
               <div style={styles.profileWrapper}>
-                <div style={styles.profileImage}><img src="/profile.jpg" alt="Profile" style={styles.profileImage} /></div>
+                <div style={styles.profileImage}><Image src="/profile.jpg" alt="Profile" style={styles.profileImage} /></div>
 
               </div>
             </div>
@@ -450,7 +450,7 @@ export default function Portfolio() {
                   <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>📅 Jan 2023 - Present | South San Francisco, CA</p>
                 </div>
                 <div style={styles.companyLogo}>
-          <img
+          <Image
           src="/gne_logo.png"  // put your logo image path here (public folder or URL)
           alt="Company Logo"
           style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -494,7 +494,7 @@ export default function Portfolio() {
                       fontSize: "2rem",
                     }}
                   >
-                      <img
+                      <Image
                       src="/actemra_logo.png"  // put your logo image path here (public folder or URL)
                       alt="Actemra Logo"
                       style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -514,7 +514,7 @@ export default function Portfolio() {
               fontSize: "2rem",
             }}
           >
-              <img
+              <Image
               src="/hemibra_logo.jpg"  // put your logo image path here (public folder or URL)
               alt="Hemlibra Logo"
               style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -532,7 +532,7 @@ export default function Portfolio() {
                       fontSize: "2rem",
                     }}
                   >
-                      <img
+                      <Image
                       src="/itovebi_logo.png"  // put your logo image path here (public folder or URL)
                       alt="Itovebi Logo"
                       style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -559,7 +559,7 @@ export default function Portfolio() {
                   <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>📅 May 2022 - Aug 2022</p>
                 </div>
                 <div style={styles.companyLogo}>
-          <img
+          <Image
           src="/gne_logo.png"  // put your logo image path here (public folder or URL)
           alt="Company Logo"
           style={{ width: 100, height: 100, objectFit: 'contain' }}
@@ -691,7 +691,7 @@ export default function Portfolio() {
             <div style={styles.cardContent}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}>
                 <div style={styles.universityLogo}>
-          <img
+          <Image
           src="/uiuc_logo.png"  // put your logo image path here (public folder or URL)
           alt="uiuc Logo"
           style={{ width: 40, height: 40, objectFit: 'contain' }}
@@ -748,7 +748,7 @@ export default function Portfolio() {
             <div style={styles.cardContent}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}>
                 <div style={styles.universityLogo}>
-          <img
+          <Image
           src="/sastra_logo.png"  // put your logo image path here (public folder or URL)
           alt="sastra Logo"
           style={{ width: 40, height: 40, objectFit: 'contain' }}
