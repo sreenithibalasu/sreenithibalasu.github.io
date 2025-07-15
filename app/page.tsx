@@ -3,7 +3,7 @@
 import type React from "react"
 import type { CSSProperties } from "react"
 
-import Link from "next/link"
+import Image from "next/image"
 
 const styles: { [key: string]: CSSProperties } = {
   container: {
@@ -302,6 +302,8 @@ const Button = ({
   variant?: "outline" | "primary"
   children: React.ReactNode
   href?: string
+  target?: string
+  rel?: string
 }) => (
   <a
     href={href || "#"}
@@ -400,15 +402,11 @@ export default function Portfolio() {
 
               <div style={{ marginTop: "1rem" }}>
                 
-                <Button variant="outline" asChild>
-                <Link href="https://github.com/sreenithibalasu" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >
+                <Button variant="outline" href="https://github.com/sreenithibalasu" target="_blank" rel="noopener noreferrer">
                   <span>🔗</span> GitHub
-                </Link>
                 </Button>
-                <Button variant="outline">
-                <Link href="https://www.linkedin.com/in/sbala04" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >
+                <Button variant="outline" href="https://www.linkedin.com/in/sbala04" target="_blank" rel="noopener noreferrer">
                   <span>💼</span> LinkedIn
-                </Link>
                 </Button>
                 
               </div>
@@ -644,7 +642,7 @@ export default function Portfolio() {
                   <span style={{ ...styles.badge, ...styles.badgeOutline }}>ML</span>
                 </div>
                 <div style={{ display: "flex", gap: "0.5rem" }}>
-                  <Button variant="outline"><Link href="https://github.com/sreenithibalasu/CoNLL_NER" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >🔗 Code</Link></Button>
+                  <Button variant="outline"  href="https://github.com/sreenithibalasu/CoNLL_NER" target="_blank" rel="noopener noreferrer" >🔗 Code</Button>
                 </div>
               </div>
             </Card>
@@ -669,7 +667,7 @@ export default function Portfolio() {
                   <span style={{ ...styles.badge, ...styles.badgeOutline }}>ML</span>
                 </div>
                 <div style={{ display: "flex", gap: "0.5rem" }}>
-                  <Button variant="outline"> <Link href="https://github.com/sreenithibalasu/TextSummary" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >🔗 Code</Link></Button>
+                  <Button variant="outline" href="https://github.com/sreenithibalasu/TextSummary" target="_blank" rel="noopener noreferrer">🔗 Code</Button>
                 </div>
               </div>
             </Card>
