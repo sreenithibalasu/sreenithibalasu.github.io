@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Auth Callback</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .success { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Tesla Fleet API Callback</h1>
+    <p>Processing authorization...</p>
+    <div id="status"></div>
+    <pre id="code-output"></pre>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state');
+        const error = urlParams.get('error');
+        const errorDescription = urlParams.get('error_description');
+
+        const statusDiv = document.getElementById('status');
+        const codeOutputPre = document.getElementById('code-output');
+
+        if (error) {
+            statusDiv.className = 'error';
+            statusDiv.innerHTML = `Authorization failed: ${errorDescription || error}.`;
+            codeOutputPre.textContent = 'Please try again.';
+        } else if (code) {
+            statusDiv.className = 'success';
+            statusDiv.innerHTML = 'Authorization successful! Please copy the code and state below:';
+            codeOutputPre.textContent = `Authorization Code:\n${code}\n\nState (for verification):\n${state}`;
+            console.log('Authorization Code:', code);
+            console.log('State:', state);
+
+            // Optional: You could add a button here to copy to clipboard, or
+            // even try to ping your localhost for a truly integrated flow,
+            // but for simple hobbyist use, manual copy is often easiest.
+            // Example: window.location.href = `http://localhost:3000/process_code?code=${code}&state=${state}`;
+        } else {
+            statusDiv.className = 'error';
+            statusDiv.innerHTML = 'No authorization code found in the URL.';
+        }
+    </script>
+</body>
+</html>
