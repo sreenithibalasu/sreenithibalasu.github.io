@@ -617,7 +617,7 @@ export default function Portfolio() {
                   <span style={{ ...styles.badge, ...styles.badgeOutline }}>Local LLMs</span>
                 </div>
                 <div style={{ display: "flex", gap: "0.5rem" }}>
-                  <Button variant="outline">🔗 Code</Button>
+                  <Button variant="outline"><Link href="https://github.com/sreenithibalasu/LLM_Commute_Briefer" target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer" >🔗 Code</Button>
                 </div>
               </div>
             </Card>
